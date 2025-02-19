@@ -50,10 +50,8 @@ def generate_launch_description():
     """Generate Launch description with Gazebo11"""
     world_options = {0: 'renault', 1: 'aston_martin', 2: 'redbull'}
     world_path = os.path.join(get_package_share_directory(
-        'ros_follow_line'), 'worlds', f'simple_circuit_{world_options[randint(0, 2)]}.world')
+        'ros_follow_line'), 'worlds', f'simple_circuit_{world_options[randint(0, 2)]}.sdf')
 
-    world_path = os.path.join(get_package_share_directory(
-        'ros_follow_line'), 'worlds', 'simple_circuit_renault.sdf')
     bridges_file = os.path.join(get_package_share_directory(
         'ros_follow_line'), 'config', 'bridges.yaml')
 

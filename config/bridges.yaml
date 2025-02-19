@@ -18,7 +18,19 @@
   direction: ROS_TO_GZ
 
 - ros_topic_name: "/cam/image_raw"
-  gz_topic_name: "/world/simple_circuit_harmonic/model/f1_renault_cam/link/hd_camera_link/sensor/camera/image"
+  gz_topic_name: "/world/simple_circuit_renault/model/f1_renault_cam/link/hd_camera_link/sensor/camera/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/cam/image_raw"
+  gz_topic_name: "/world/simple_circuit_redbull/model/f1_redbull_cam/link/hd_camera_link/sensor/camera/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/cam/image_raw"
+  gz_topic_name: "/world/simple_circuit_aston_martin/model/f1_aston_martin_cam/link/hd_camera_link/sensor/camera/image"
   ros_type_name: "sensor_msgs/msg/Image"
   gz_type_name: "gz.msgs.Image"
   direction: GZ_TO_ROS
