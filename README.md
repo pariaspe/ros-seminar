@@ -60,7 +60,7 @@ output_vel = controller.update(error)
 mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src
 git clone https://github.com/pariaspe/ros_follow_line.git
 cd ~/ros2_ws
-colcon build
+colcon build --symlink-install
 ```
 
 ### Launching

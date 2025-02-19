@@ -32,6 +32,7 @@ ament_environment_hooks("hooks/resource_paths.sh")
 install(DIRECTORY
   worlds
   models
+  config
   DESTINATION share/${PROJECT_NAME}
 )
 
