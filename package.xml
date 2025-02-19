@@ -3,7 +3,7 @@
 <package format="3">
   <name>ros_follow_line</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>A ROS 2 follow line example</description>
   <maintainer email="pedro.ariasp@upm.es">pariaspe</maintainer>
   <license>Apache-2.0</license>
 
