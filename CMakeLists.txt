@@ -51,8 +51,10 @@ ament_python_install_package(
 )
 
 # Install Python executables
-install(PROGRAMS
-  src/game_logic_node.py
+install(
+  PROGRAMS
+    src/game_logic_node.py
+    ## Place your python nodes here
   DESTINATION lib/${PROJECT_NAME}
 )
 

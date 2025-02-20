@@ -41,9 +41,10 @@ from random import randint
 from ament_index_python.packages import get_package_share_directory
 from launch_ros.actions import Node, SetParameter
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, GroupAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
+from launch.conditions import IfCondition
 
 
 def generate_launch_description():
@@ -91,4 +92,23 @@ def generate_launch_description():
                 {'config_file': LaunchConfiguration('config_file')},
             ]
         ),
+        DeclareLaunchArgument(
+            'game_logic',
+            default_value='true',
+            choices=['true', 'false'],
+            description='Launch Game Logic.'),
+        # Launch processes
+        GroupAction(
+            condition=IfCondition(LaunchConfiguration('game_logic')),
+            actions=[
+                IncludeLaunchDescription(
+                    PythonLaunchDescriptionSource([os.path.join(
+                        get_package_share_directory('ros_follow_line'), 'launch'),
+                        '/game_logic.launch.py']),
+                    launch_arguments={
+                        'verbose': LaunchConfiguration('verbose')
+                    }.items()
+                )
+            ]
+        )
     ])
