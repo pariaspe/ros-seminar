@@ -55,6 +55,7 @@ install(
   PROGRAMS
     src/game_logic_node.py
     ## Place your python nodes here
+    src/f1_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
