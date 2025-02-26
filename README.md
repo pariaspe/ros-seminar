@@ -109,6 +109,16 @@ gzclient: /usr/include/boost/smart_ptr/shared_ptr.hpp:728: typename boost::detai
  . /usr/share/gazebo/setup.sh 
 ```
 
+### Install Gazebo Harmonic with ROS 2 Humble
+
+```
+sudo curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
+sudo apt-get update
+sudo apt-get install gz-harmonic
+sudo apt-get install ros-humble-ros-gzharmonic
+```
+
 ## Acknowledgements
 The idea of the exercise, the models and the worlds files are original from [RoboticsAcademy](https://github.com/JdeRobot/RoboticsAcademy) ([JdeRobot](https://github.com/JdeRobot)), where the author is an active maintainer.
 
