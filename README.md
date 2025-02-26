@@ -65,7 +65,8 @@ colcon build --symlink-install
 
 ### Launching
 ```bash
-ros2 launch ros_follow_line gazebo.launch.py
+source install/setup.bash
+ros2 launch ros_follow_line gzsim.launch.py
 ```
 
 ## ROS Interfaces
